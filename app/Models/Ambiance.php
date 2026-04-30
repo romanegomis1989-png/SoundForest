@@ -7,6 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ambiance extends Model
 {
-    /** @use HasFactory<\Database\Factories\AmbianceFactory> */
-    use HasFactory;
+
 }

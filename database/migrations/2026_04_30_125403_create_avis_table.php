@@ -14,11 +14,12 @@ return new class extends Migration
         Schema::create('avis', function (Blueprint $table) {
             $table->id();
             $table->string('avis');
+            $table->foreignId('son_id')->constrained()->onDelete('restrict');
+            $table->foreignId('user_id')->constrained()->onDelete('restrict');            
             $table->integer('note')->unsigned()->nullable(); // Note de 1 à 5
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
-            $table->foreignId('son_id')->constrained()->onDelete('restrict');
-            $table->foreignId('user_id')->constrained()->onDelete('restrict');
+
             $table->unique(['son_id', 'user_id']); // Un utilisateur ne peut donner qu'un seul avis par son
         });
     }
