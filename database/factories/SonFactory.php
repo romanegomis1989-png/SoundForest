@@ -24,7 +24,6 @@ class SonFactory extends Factory
         return [
             'nom' => $this->faker->unique()->word(),
             'description' => $this->faker->sentence(),
-            'type_id' => Type::inRandomOrder()->first()->id,
             'style_id' => Style::inRandomOrder()->first()->id,
             'ambiance_id' => Ambiance::inRandomOrder()->first()->id,
             'user_id' => User::inRandomOrder()->first()->id,

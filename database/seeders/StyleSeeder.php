@@ -14,24 +14,40 @@ class StyleSeeder extends Seeder
     public function run(): void
     {
         Style::create([
-            'nom' => 'Relaxant',
-            'description' => 'Sons apaisants pour la détente et la méditation.',
+            'nom' => 'Musicaux',
+            'description' => 'Morceaux de musique libres de droits contenant plusieurs sous styles (rock, jazz, classique, etc).',
         ]);
         Style::create([
-            'nom' => 'Dynamique',
-            'description' => 'Sons énergiques pour stimuler l’activité.',
+            'nom' => 'Cinématiques',
+            'description' => 'Sons/effets sonores puissants et épiques (impacts, transitions, woosh, etc) étant souvent utilisés pour des bandes annonces.',
         ]);
         Style::create([
-            'nom' => 'Naturel',
-            'description' => 'Sons authentiques de la nature pour une immersion totale.',
+            'nom' => 'Dessins animés',
+            'description' => 'Sons et bruitages sortant tout droit de dessins animés pour un style cartoon, goofy et exagéré.',
         ]);
         Style::create([
-            'nom' => 'Ambiant',
-            'description' => 'Sons atmosphériques pour créer une ambiance particulière.',
+            'nom' => 'Jeux vidéos',
+            'description' => 'Sons et bruitages provenant de jeux vidéos, tout type de jeux vidéos confondus',
         ]);
         Style::create([
-            'nom' => 'Instrumental',
-            'description' => 'Sons de musique instrumentale pour accompagner vos moments.',
+            'nom' => 'Jingles',
+            'description' => 'Morceaux de musique ne dépassant pas 1 minute, idéal pour des publicités, intros, outros et reportages',
+        ]);
+                Style::create([
+            'nom' => 'Mécaniques',
+            'description' => 'Sons et bruitages très industriels, provenant de vehicules, robots ou même usines',
+        ]);
+                Style::create([
+            'nom' => 'Humains',
+            'description' => 'Sons et bruitages produits par un humain (homme, femme, enfant)',
+        ]);
+                Style::create([
+            'nom' => 'Animaux',
+            'description' => 'Sons et bruitages produits par un animal (sauvage, domestique)',
+        ]);
+                Style::create([
+            'nom' => 'Informatique/Numérique',
+            'description' => 'Sons provenant des outils informatique (bug, notifications, glitch, virus, alarmes etc).',
         ]);
     }
 }
