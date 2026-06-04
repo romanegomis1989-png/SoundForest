@@ -24,10 +24,11 @@ class SonFactory extends Factory
         return [
             'nom' => $this->faker->unique()->word(),
             'description' => $this->faker->sentence(),
+            'url' => 'mixkit-birds-in-the-spring-forest-1234.wav',
             'style_id' => Style::inRandomOrder()->first()->id,
             'ambiance_id' => Ambiance::inRandomOrder()->first()->id,
             'user_id' => User::inRandomOrder()->first()->id,
-             'duration' => $this->faker->numberBetween(30, 300),
+            'duree' => $this->faker->numberBetween(30, 300),
         ];
     }
 }

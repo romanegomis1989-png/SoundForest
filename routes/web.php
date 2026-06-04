@@ -9,7 +9,8 @@ Route::get('/', function () {
 });
 
 Route::get('/sons', [SonController::class, 'index']);
-
+Route::get('son', function() {return view('son');});
+Route::get('/wavesurfer', function() {return view('wavesurfer');});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
