@@ -3,9 +3,20 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SonController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Son;
+use App\Models\Style;
+use App\Models\Ambiance;
+
 
 //Accès à la racine de l'application
-Route::get('/', function () {return view('home');})->name('home');
+Route::get('/', 
+    function () {
+        $nbSons = Son::count();
+        $nbStyles = Style::count();
+        $nbAmbiances = Ambiance::count();
+        return view('home',['nbSons' => $nbSons, 'nbStyles'=>$nbStyles, 'nbAmbiances'=>$nbAmbiances]);
+    }
+)->name('home');
 
 Route::get('/sons', [SonController::class, 'index']);
 Route::get('son', function() {return view('son');});

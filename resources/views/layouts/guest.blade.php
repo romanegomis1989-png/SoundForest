@@ -32,8 +32,8 @@
                 {{ $slot }}
             </main>
 
-            <footer>
-                Copyright
+            <footer class="sf-footer">
+                2026 Romane Gomis - BTS SIO SLAM
             </footer>
         </div>
     </body>
