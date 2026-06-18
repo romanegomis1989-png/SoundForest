@@ -4,9 +4,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SonController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Accès à la racine de l'application
+Route::get('/', function () {return view('home');});
 
 Route::get('/sons', [SonController::class, 'index']);
 Route::get('son', function() {return view('son');});
