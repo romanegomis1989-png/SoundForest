@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    /* surfaces */
+    --bark:        #0b1410;
+    --moss-900:    #0f1d16;
+    --moss-800:    #14271d;
+    --canopy-700:  #1a3327;
+    --canopy-600:  #234534;
+    --canopy-500:  #2f5a44;
+
+    /* accents */
+    --glow:        #7cf8b0;   /* spore bioluminescente */
+    --glow-soft:   #4ade80;
+    --bloom:       #c8a2ff;   /* floraison */
+    --ember:       #ffc56b;   /* luciole */
+
+    /* texte */
+    --mist:        #e9f2ec;
+    --sage:        #9db8a6;
+    --sage-dim:    #6e8b79;
+
+    --ring:        rgba(124, 248, 176, .35);
+    --shadow-deep: 0 24px 60px -28px rgba(0, 0, 0, .9);
+
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body:    'Figtree', ui-sans-serif, system-ui, sans-serif;
+    --font-mono:    'Space Mono', ui-monospace, monospace;
+}xq
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--mist);
+    background:
+        radial-gradient(1100px 700px at 78% -8%, rgba(124, 248, 176, .10), transparent 60%),
+        radial-gradient(900px 650px at 12% 6%, rgba(200, 162, 255, .09), transparent 60%),
+        radial-gradient(1200px 900px at 50% 120%, rgba(47, 90, 68, .35), transparent 70%),
+        var(--bark);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
