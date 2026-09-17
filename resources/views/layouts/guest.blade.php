@@ -12,7 +12,11 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/css/style.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css',
+         'resources/css/sf.css',
+         'resources/css/style.css',
+         'resources/js/app.js'])
+         
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-forest-bg dark:bg-gray-900">

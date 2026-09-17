@@ -1,5 +1,5 @@
 <x-app-layout>
-
+    <p>mentions.blade.php</p>
     <div class="container" style="color: white;">
         <h1>Mentions légales</h1>
 

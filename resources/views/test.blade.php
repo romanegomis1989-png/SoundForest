@@ -1,4 +1,6 @@
 <x-app-layout>
+    <p>test.blade.php</p>
+
     <canvas id="fireflies"></canvas>
 <div class="sf-shell">
   <nav class="sf-nav">

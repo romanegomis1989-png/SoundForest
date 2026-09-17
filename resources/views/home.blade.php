@@ -1,6 +1,8 @@
 <x-guest-layout>
+    
     <canvas id="fireflies"></canvas>
     <section class="hero sf-wrap" style="min-height:auto;padding:5vh 0 2vh">
+        <p class="note-technique">view : home.blade.php</p>
         <div class="hero-grid">
             <!-- Gauche -->
             <div>
