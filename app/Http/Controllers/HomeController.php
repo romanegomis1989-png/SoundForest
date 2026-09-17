@@ -14,7 +14,15 @@ class HomeController extends Controller
         $nbStyles = Style::count();
         $nbAmbiances = Ambiance::count();
 
+        $populaires = Son::Take(6)->orderByDesc('popularite')->get();
+        $nouveautes = Son::Take(6)->orderByDesc('created_at')->get();
+
         // On retourne la vue home
-        return view('home', compact('nbSons', 'nbStyles', 'nbAmbiances'));
+        return view('home', 
+            compact('nbSons', 
+                    'nbStyles', 
+                    'nbAmbiances', 
+                    'populaires',
+                    'nouveautes'));
     }
 }

@@ -15,7 +15,7 @@
     <?php $script=""; $id=1; ?>
     <ul>
             @foreach ($sons as $son)
-            <div id="wavesurfer{{ $id }}" class="wavesurfer">son</div>
+            <div id="nouveaute{{ $id }}" class="nouveaute">nouveauté</div>
             <?php $id++; ?>
             @endforeach
     </ul>

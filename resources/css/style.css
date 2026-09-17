@@ -2,3 +2,13 @@
 .note-technique {
     font-size: 50%;
 }
+
+.sf-h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    /*font-size: clamp(2.4rem, 6vw, 4.4rem);*/
+    font-size: clamp(1.4rem, 6vw, 3rem);
+    line-height: 1.02;
+    letter-spacing: -.025em;
+    margin: .35em 0 .25em;
+}
