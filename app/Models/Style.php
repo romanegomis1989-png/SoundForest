@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Style extends Model
 {
-
+    public function sons()
+    {
+        return $this->hasMany(Son::class);
+    }
 }
 
-public function sons()
-{
-    return $this->hasMany(Son::class);
-}
+
