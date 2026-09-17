@@ -29,6 +29,8 @@ class SonFactory extends Factory
             'ambiance_id' => Ambiance::inRandomOrder()->first()->id,
             'user_id' => User::inRandomOrder()->first()->id,
             'duree' => $this->faker->numberBetween(30, 300),
+            'popularite' => $this->faker->numberBetween(0, 80),
+            'created_at' => $this->faker->dateTimeBetween('-30 years', 'now'),
         ];
     }
 }
