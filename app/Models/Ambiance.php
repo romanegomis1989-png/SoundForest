@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ambiance extends Model
 {
-
+    public function sons()
+    {
+        return $this->hasMany(Son::class);
+    }
 }
 
-public function sons()
-{
-    return $this->hasMany(Son::class);
-}
+
 
