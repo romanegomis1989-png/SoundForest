@@ -13,8 +13,8 @@
     <h1>Sons</h1>
 
     @forelse ($sons as $son)
-        <div class="waveform" data-url="{{ $son['urlComplete'] }}">
-            <strong>{{ $son['nom'] }}</strong>
+        <div class="waveform" data-url="{{ $son['url_complete'] }}">
+            <strong>{{ $son['nom'] }} ({{ $son['created_at_formatted'] }})</strong>
             <p>{{ $son['url'] }}</p>
             <div class="waveform-canvas"></div>
             <div class="waveform-controls">

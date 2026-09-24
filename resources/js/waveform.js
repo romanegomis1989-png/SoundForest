@@ -1,5 +1,5 @@
 import WaveSurfer from 'wavesurfer.js';
-alert("kjhkjh");
+
 function formatTime(seconds) {
     const m = Math.floor(seconds / 60);
     const s = Math.floor(seconds % 60);
