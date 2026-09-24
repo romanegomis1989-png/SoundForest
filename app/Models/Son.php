@@ -21,9 +21,9 @@ class Son extends Model
 
     protected function dureeFormatted(): Attribute
     {
-        return Attribute::get(fn () => $this->secondesVersHeuresMinutes($this->duree));
+        return Attribute::get(fn () => $this->secondesVersMinutesSecondes($this->duree));
     }
-    
+
     public function style()
     {
         return $this->belongsTo(Style::class);
@@ -44,7 +44,13 @@ class Son extends Model
         return $this->hasMany(Avis::class);
     }
 
-    function secondesVersHeuresMinutes(?int $secondes): string
+    /**
+     * Convertit une durée en secondes au format mm:ss.
+     *
+     * @param  int|null  $secondes
+     * @return string
+     */
+    function secondesVersMinutesSecondes(?int $secondes): string
     {
         if ($secondes === null) {
             return '00:00';
@@ -53,10 +59,10 @@ class Son extends Model
         $signe = $secondes < 0 ? '-' : '';
         $secondes = abs($secondes);
 
-        $heures  = intdiv($secondes, 3600);
-        $minutes = intdiv($secondes % 3600, 60);
+        $minutes = intdiv($secondes, 60);
+        $reste   = $secondes % 60;
 
-        return sprintf('%s%02d:%02d', $signe, $heures, $minutes);
+        return sprintf('%s%02d:%02d', $signe, $minutes, $reste);
     }
 
 }
