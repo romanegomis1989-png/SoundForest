@@ -15,7 +15,8 @@
         @vite(['resources/css/app.css',
          'resources/css/sf.css',
          'resources/css/style.css',
-         'resources/js/app.js'])
+         'resources/js/app.js',
+         'resources/js/waveform.js'])
          
     </head>
     <body class="font-sans antialiased">
