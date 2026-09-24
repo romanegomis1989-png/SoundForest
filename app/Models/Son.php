@@ -19,6 +19,11 @@ class Son extends Model
         return Attribute::get(fn () => $this->created_at?->format('d/m/Y H:i'));
     }
 
+    protected function dureeFormatted(): Attribute
+    {
+        return Attribute::get(fn () => $this->secondesVersHeuresMinutes($this->duree));
+    }
+    
     public function style()
     {
         return $this->belongsTo(Style::class);
@@ -37,6 +42,21 @@ class Son extends Model
     public function avis()
     {
         return $this->hasMany(Avis::class);
+    }
+
+    function secondesVersHeuresMinutes(?int $secondes): string
+    {
+        if ($secondes === null) {
+            return '00:00';
+        }
+
+        $signe = $secondes < 0 ? '-' : '';
+        $secondes = abs($secondes);
+
+        $heures  = intdiv($secondes, 3600);
+        $minutes = intdiv($secondes % 3600, 60);
+
+        return sprintf('%s%02d:%02d', $signe, $heures, $minutes);
     }
 
 }
