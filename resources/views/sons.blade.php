@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sound Forest - Les sons</title>
-
-    <!-- Script -->
-     @vite(['resources/css/app.css', 'resources/css/style.css', 'resources/js/app.js'])
+    <meta charset="utf-8">
+    <title>Lecteurs audio</title>
+    @vite(['resources/css/app.css', 'resources/js/waveform.js'])
+    <style>
+        .waveform { margin-bottom: 2rem; }
+        .waveform-controls { display: flex; gap: 1rem; align-items: center; margin-top: .5rem; }
+    </style>
 </head>
 <body>
-    <h1>
-        Les sons
-    </h1>
-    <?php $script=""; $id=1; ?>
-    <ul>
-            @foreach ($sons as $son)
-            <div id="nouveaute{{ $id }}" class="nouveaute">nouveauté</div>
-            <?php $id++; ?>
-            @endforeach
-    </ul>
-    <script>
-        <script>
-            const wavesurfer1 = WaveSurfer.create({
-                container: '#wavesurfer',
-                waveColor: '#ff0000ff',
-                progressColor: '#850000ff',
-                height: 100,
-                url: '/storage/sons/mixkit-creepy-tomb-ambience-2500.wav',
-            });
-        </script>
+    <h1>Sons</h1>
 
+    @forelse ($sons as $son)
+        <div class="waveform" data-url="{{ $son['url'] }}">
+            <strong>{{ $son['titre'] }}</strong>
+            <div class="waveform-canvas"></div>
+            <div class="waveform-controls">
+                <button type="button" class="waveform-play">Lecture</button>
+                <span class="waveform-time">Chargement…</span>
+            </div>
+        </div>
+    @empty
+        <p>Aucun fichier dans storage/app/public/audio.</p>
+    @endforelse
 </body>
-</html>wq   
+</html>

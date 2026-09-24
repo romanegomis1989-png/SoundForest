@@ -1,15 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
-use App\Models\Son;
+use Illuminate\Support\Facades\Storage;
 
 class SonController extends Controller
 {
     public function index()
     {
-        $sons = Son::all();
-        return view('sons', ['sons' => $sons]);
+        $sons = collect(Storage::disk('public')->files('Sons'))
+            ->filter(fn ($f) => preg_match('/\.(mp3|wav|ogg|m4a)$/i', $f))
+            ->map(fn ($f) => [
+                'titre' => basename($f),
+                'url'   => Storage::url($f),
+            ])
+            ->values();
+        //dd($sons);
+
+        return view('sons', compact('sons'));
     }
 }
