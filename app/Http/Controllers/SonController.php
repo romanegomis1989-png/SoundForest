@@ -8,6 +8,7 @@ class SonController extends Controller
    public function index()
     {
         $sons = Son::all('nom', 'url', 'created_at');
+        $sons = Son::orderByDesc('created_at')->get(['nom', 'url', 'created_at']);
         //dd($sons);
         return view('sons', compact('sons'));
     }
