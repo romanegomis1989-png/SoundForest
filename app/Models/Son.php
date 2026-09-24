@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Casts\Attribute;
+
 
 class Son extends Model
 {
@@ -13,6 +15,11 @@ class Son extends Model
     {
         return $this->belongsTo(Style::class);
     }
+
+protected function urlComplete(): Attribute
+{
+    return Attribute::get(fn () => asset('storage/Sons/' . $this->url));
+}
 
     public function ambiance()
     {

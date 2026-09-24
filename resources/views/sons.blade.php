@@ -13,8 +13,9 @@
     <h1>Sons</h1>
 
     @forelse ($sons as $son)
-        <div class="waveform" data-url="{{ $son['url'] }}">
-            <strong>{{ $son['titre'] }}</strong>
+        <div class="waveform" data-url="{{ $son['urlComplete'] }}">
+            <strong>{{ $son['nom'] }}</strong>
+            <p>{{ $son['url'] }}</p>
             <div class="waveform-canvas"></div>
             <div class="waveform-controls">
                 <button type="button" class="waveform-play">Lecture</button>
@@ -22,7 +23,7 @@
             </div>
         </div>
     @empty
-        <p>Aucun fichier dans storage/app/public/audio.</p>
+        <p>Aucun fichier la table des sons.</p>
     @endforelse
 </body>
 </html>

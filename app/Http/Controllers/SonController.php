@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Son;
 
 class SonController extends Controller
 {
@@ -15,8 +16,10 @@ class SonController extends Controller
             ])
             ->values();
         */
-        //dd($sons);
+        
 
+        $sons = Son::all('nom', 'url');
+        
         return view('sons', compact('sons'));
     }
 }
