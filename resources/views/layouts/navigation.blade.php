@@ -83,8 +83,8 @@
                 {{ __('Musique') }}
             </x-responsive-nav-link>
 
-            <x-responsive-nav-link :href="route('contact.index')" :active="request()->routeIs('contact.index')">
-                {{ __('Contact') }}
+            <x-responsive-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+                {{ __('Nous contacter') }}
             </x-responsive-nav-link>
         </div>
 
