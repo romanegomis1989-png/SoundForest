@@ -14,7 +14,7 @@ Route::get('/sons', [SonController::class, 'index'])->name('sons.index');
 
 Route::get('/wavesurfer', function() {return view('wavesurfer');});
 Route::get('/mentions', function() {return view('mentions');});
-Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::get('/contact', [ContactController::class, 'index'])->name('contacts');
 Route::get('/test', function() {return view('test');})->name('test');
 Route::get('/dashboard', function () {
     return view('dashboard');
