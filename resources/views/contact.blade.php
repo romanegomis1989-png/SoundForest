@@ -20,7 +20,7 @@
             </div>
             <div style="display:flex">
                 <label style="width:100px;"></label>
-                <button type="submit" name="envoyer" id="envoyer">Envoyer</button>
+                <button type="submit" name="envoyer" id="envoyer">Envoyer le formulaire</button>
             </div>
         </form>
 
