@@ -20,7 +20,7 @@
                         {{ __('Musique') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('contact.index')" :active="request()->routeIs('contact.index')">
+                    <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
                         {{ __('Contact') }}
                     </x-nav-link>
                 </div>
