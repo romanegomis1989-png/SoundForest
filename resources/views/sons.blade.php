@@ -18,17 +18,27 @@
                     <h3 class="card-title">{{ $son['nom'] }}</h3>
                     <p class="card-desc">{{ $son['description'] }}</p>
                     <div class="waveform" data-url="{{ $son['url_complete'] }}">
+                    
                         {{-- <strong>{{ $son['nom'] }} ({{ $son['created_at_formatted'] }})</strong>
                         <p>{{ $son['url'] }}</p>
                         <p>{{ $son['user']->name }}</p> --}}
+                        
+                        
+                        <button class="play js-play" type="button" aria-label="Écouter">
+                            <svg class="ic-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            <svg class="ic-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+                        </button>
+                        {{-- Image du wave  --}}
                         <div class="waveform-canvas"></div>
+                        
+                        {{-- Boutons de lecture --}}
                         <div class="waveform-controls">
                             <button type="button" class="waveform-play">Lecture</button>
                             <span class="waveform-time">Chargement…</span>
                         </div>
                     </div>
                     <div class="card-foot">
-                        <span class="badge badge-amb">Horreur</span>
+                        <span class="badge badge-amb">{{ $son['ambiance']->nom }}</span>
                     </div>
                 </article>
             @empty
