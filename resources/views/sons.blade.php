@@ -22,12 +22,7 @@
                         {{-- <strong>{{ $son['nom'] }} ({{ $son['created_at_formatted'] }})</strong>
                         <p>{{ $son['url'] }}</p>
                         <p>{{ $son['user']->name }}</p> --}}
-                        
-                        
-                        <button class="play js-play" type="button" aria-label="Écouter">
-                            <svg class="ic-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                            <svg class="ic-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
-                        </button>
+                                        
                         {{-- Image du wave  --}}
                         <div class="waveform-canvas"></div>
                         
