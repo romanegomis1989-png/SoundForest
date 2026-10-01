@@ -44,7 +44,7 @@ class SonSeeder extends Seeder
 
             Son::create([
                 'nom' => $nom,
-                'description' => $nom . ' description',
+                'description' => fake()->sentence(10),
                 'url' => $nomFichier,
                 'style_id' => Style::inRandomOrder()->first()->id,
                 'ambiance_id' => Ambiance::inRandomOrder()->first()->id,

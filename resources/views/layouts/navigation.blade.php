@@ -17,7 +17,7 @@
                     </x-nav-link>
 
                     <x-nav-link :href="route('test')" :active="request()->routeIs('test')">
-                        {{ __('Musique') }}
+                        {{ __('Test') }}
                     </x-nav-link>
 
                     <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
@@ -75,12 +75,12 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+            <x-responsive-nav-link :href="route('sons.index')" :active="request()->routeIs('sons.index')">
                 {{ __('Sons') }}
             </x-responsive-nav-link>
 
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Musique') }}
+            <x-responsive-nav-link :href="route('test')" :active="request()->routeIs('test')">
+                {{ __('Test') }}
             </x-responsive-nav-link>
 
             <x-responsive-nav-link :href="route('contact')" :active="request()->routeIs('contact')">

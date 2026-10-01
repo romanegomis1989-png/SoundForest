@@ -15,15 +15,20 @@
                     <div class="card-top">
                         <span class="badge badge-style">{{ $son['style']->nom }}</span><span class="dur">{{ $son['duree-formatted'] }}</span>
                     </div>
-
+                    <h3 class="card-title">{{ $son['nom'] }}</h3>
+                    <p class="card-desc">{{ $son['description'] }}</p>
                     <div class="waveform" data-url="{{ $son['url_complete'] }}">
-                        <strong>{{ $son['nom'] }} ({{ $son['created_at_formatted'] }})</strong>
+                        {{-- <strong>{{ $son['nom'] }} ({{ $son['created_at_formatted'] }})</strong>
                         <p>{{ $son['url'] }}</p>
+                        <p>{{ $son['user']->name }}</p> --}}
                         <div class="waveform-canvas"></div>
                         <div class="waveform-controls">
                             <button type="button" class="waveform-play">Lecture</button>
                             <span class="waveform-time">Chargement…</span>
                         </div>
+                    </div>
+                    <div class="card-foot">
+                        <span class="badge badge-amb">Horreur</span>
                     </div>
                 </article>
             @empty
