@@ -20,6 +20,10 @@
                         {{ __('Test') }}
                     </x-nav-link>
 
+                    <x-nav-link :href="route('qui-sommes-nous')" :active="request()->routeIs('qui-sommes-nous')">
+                        {{ __('Qui sommes-nous ?') }}
+                    </x-nav-link>
+
                     <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
                         {{ __('Nous contacter') }}
                     </x-nav-link>
@@ -81,6 +85,10 @@
 
             <x-responsive-nav-link :href="route('test')" :active="request()->routeIs('test')">
                 {{ __('Test') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('qui-sommes-nous')" :active="request()->routeIs('qui-sommes-nous')">
+                {{ __('Qui sommes-nous ?') }}
             </x-responsive-nav-link>
 
             <x-responsive-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
