@@ -38,7 +38,7 @@
             </main>
 
             <footer class="sf-footer">
-                Copyright &copy; 2026 Romane Gomis - BTS SIO SLAM<br>
+                <span>Copyright &copy; 2026 Romane Gomis - BTS SIO SLAM</span>
                 <span><a href="{{ route('mentions-legales') }}">Mentions légales</a></span>
             </footer>
         </div>
