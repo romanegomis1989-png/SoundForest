@@ -10,7 +10,7 @@ use App\Http\Controllers\QuiSommesNousController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/sons', [SonController::class, 'index'])->name('sons.index');
 Route::get('/wavesurfer', function() {return view('wavesurfer');});
-Route::get('/mentions', function() {return view('mentions');});
+Route::get('/mentions-legales', function() {return view('mentions');})->name('mentions-legales');;
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::get('/test', function() {return view('test');})->name('test');
 Route::get('/qui-sommes-nous', [QuiSommesNousController::class, 'index'])->name('qui-sommes-nous');
