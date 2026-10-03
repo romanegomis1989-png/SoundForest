@@ -1,5 +1,7 @@
 <x-guest-layout>
     <section class="sf-wrap" style="min-height:auto;padding:5vh 0 2vh">
+
+        <p class="note-technique">view : qui-sommes-nous.blade.php</p>
         <p>
             Qui sommes-nous ?<br>
         Bienvenue dans Sound Forest, une forêt sonore où chaque arbre cache un son à découvrir.<br>

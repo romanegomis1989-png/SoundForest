@@ -7,6 +7,9 @@
 
 
     <section class="sf-wrap" style="min-height:auto;padding:5vh 0 2vh">
+
+        <p class="note-technique">view : sons.blade.php</p>
+
         <h2 class="sf-h2">Nouveautés</h2>
 
         <div class="grid">
