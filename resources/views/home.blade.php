@@ -104,6 +104,15 @@
 
     </section>
 
+        {{-- Qui sommes-nous --}}
+    <section class="qui-sommes-nous sf-wrap" style="min-height:auto;padding:5vh 0 2vh">
+        <h2 class="sf-h2">Qui sommes-nous ?</h2>
+        <p> Sound Forest est une bibliothèque sonore francophone qui réunit des centaines de sons, d'ambiances et de musiques pour vos montages, vidéos, podcasts et créations en tout genre. Chaque son est classé par style et par ambiance pour vous aider à trouver en quelques secondes celui qui donnera vie à votre projet.
+            L'écoute est libre et sans inscription, avec 10 téléchargements par jour, ou en illimité avec un compte gratuit. Créateurs, vous pouvez aussi proposer vos propres sons pour faire grandir la forêt.
+            Entrez, écoutez, et trouvez le son qui manquait à votre histoire.
+        </p>    
+    
+    </section>
     <script>
 
         const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

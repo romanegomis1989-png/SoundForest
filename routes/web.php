@@ -4,6 +4,7 @@ use App\Http\Controllers\SonController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\QuiSommesNousController;
 
 //Accès à la racine de l'application
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -12,9 +13,11 @@ Route::get('/wavesurfer', function() {return view('wavesurfer');});
 Route::get('/mentions', function() {return view('mentions');});
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::get('/test', function() {return view('test');})->name('test');
+Route::get('/qui-sommes-nous', [QuiSommesNousController::class, 'index'])->name('qui-sommes-nous');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
