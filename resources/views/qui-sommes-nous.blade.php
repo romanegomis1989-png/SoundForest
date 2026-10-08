@@ -3,7 +3,7 @@
 
         <p class="note-technique">view : qui-sommes-nous.blade.php</p>
         
-        <h1 class="sf-h1">Qui sommes-nous ?</h1>
+        <h2 class="sf-h2">Qui sommes-nous ?</h2>
         
         <p>Bienvenue dans Sound Forest, une forêt sonore où chaque arbre cache un son à découvrir.<br>
         Né d'une passion pour le son et la création, Sound Forest est une bibliothèque francophone qui réunit des centaines, et bientôt des milliers, de sons, d'ambiances et de musiques prêts à donner vie à vos projets. Que vous montiez une vidéo, illustriez un podcast, sonorisiez un court-métrage, un jeu ou une simple présentation, vous trouverez ici la matière sonore qu'il vous faut : bruitages du quotidien, paysages naturels, atmosphères urbaines, textures mystérieuses ou mélodies originales.<br>

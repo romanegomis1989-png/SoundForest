@@ -6,7 +6,7 @@
             <!-- Gauche -->
             <div>
                 <!-- <p class="eyebrow">Maquette autonome - Aperçu simple</p> -->
-                <h1 class="sf-h1">Plongez dans une<br>forêt qui <em>résonne</em>.</h1>
+                <h1 class="sf-h1">{!!__("Plongez dans une<br>forêt qui <em>résonne</em>.")!!}</h1>
                 <!-- <p class="lead">6 des sons sont embarqués ici : tout fonctionne hors-ligne et sans installation.</p> -->
                 <div class="hero-stats">
                     <div class="stat">

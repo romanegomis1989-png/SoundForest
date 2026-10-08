@@ -1,6 +1,6 @@
 <x-guest-layout>
     <section class="sf-wrap" style="min-height:auto;padding:5vh 0 2vh">
-        <h1 class="sf-h1">Contact</h1>
+        <h2 class="sf-h2">Contact</h2>
         <form method="post">
             <div style="display:flex">
                 <label style="width:100px;" for="nom">nom:</label>
