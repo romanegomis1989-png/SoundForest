@@ -12,3 +12,27 @@
     letter-spacing: -.025em;
     margin: .35em 0 .25em;
 }
+
+.auth-container {
+    display: flex;
+    justify-content: center;   /* centrage horizontal */
+    align-items: center;       /* centrage vertical */
+    min-height: 100vh;       
+}
+
+.auth-container form {
+    width: 400px;
+    border: solid 1px gray;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .2);
+    padding: 15px;
+}
+
+.auth-container label, .auth-container label span, .auth-container a,
+.dark .auth-container label, .dark .auth-container label span, .dark .auth-container a {
+    color: #ddd !important;
+}
+
+.auth-container a:hover, .dark .auth-container a:hover {
+    color: #fff !important;
+}
