@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             AmbianceSeeder::class,
             SonSeeder::class,
             AvisSeeder::class,
+            FavoriSeeder::class,
         ]);
     }
 }

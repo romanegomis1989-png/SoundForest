@@ -22,8 +22,8 @@ class AvisFactory extends Factory
         return [
             'avis' => $this->faker->sentence(),
             'note' => $this->faker->numberBetween(1, 5),
-             'son_id' => Son::inRandomOrder()->first()->id,
-             'user_id' => User::inRandomOrder()->first()->id,
+            'son_id' => Son::inRandomOrder()->first()->id,
+            'user_id' => User::inRandomOrder()->first()->id,
         ];
     }
 }
