@@ -10,13 +10,13 @@
 
         <p class="note-technique">view : sons.blade.php</p>
 
-        <h2 class="sf-h2">Nouveautés</h2>
+        <h2 class="sf-h2">Sons</h2>
 
         <div class="grid">
             @forelse ($sons as $son)
                 <x-son-card :son="$son" />
             @empty
-                <p>Aucun fichier la table des sons.</p>
+                <p>Aucun fichier dans la table des sons.</p>
             @endforelse
         </div>
     </section>

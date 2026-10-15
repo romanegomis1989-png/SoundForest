@@ -35,7 +35,7 @@
             @forelse ($nouveautes as $son)
                 <x-son-card :son="$son" />
             @empty
-                <p>Aucun fichier la table des sons.</p>
+                <p>Aucun fichier dans la table des sons.</p>
             @endforelse  
         </div>
 
@@ -48,7 +48,7 @@
             @forelse ($populaires as $son)
                 <x-son-card :son="$son" />
             @empty
-                <p>Aucun fichier la table des sons.</p>
+                <p>Aucun fichier dans la table des sons.</p>
             @endforelse  
         </div>
 

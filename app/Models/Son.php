@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class Son extends Model
 {
 
+
     protected function urlComplete(): Attribute
     {
         return Attribute::get(fn () => asset('storage/Sons/' . $this->url));
