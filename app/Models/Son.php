@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
-
+use Illuminate\Support\Facades\Auth;
 
 class Son extends Model
 {
@@ -43,6 +43,11 @@ class Son extends Model
     {
         return $this->hasMany(Avis::class);
     }
+
+    public function favori()
+    {
+        return $this->hasOne(Favori::class)->where('user_id', Auth::id());
+    }    
 
     /**
      * Convertit une durée en secondes au format mm:ss.

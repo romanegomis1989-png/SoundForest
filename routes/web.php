@@ -1,10 +1,11 @@
 <?php
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SonController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\QuiSommesNousController;
+use App\Http\Controllers\FavoriController;
 
 //Accès à la racine de l'application
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -20,6 +21,7 @@ Route::get('/qui-sommes-nous', [QuiSommesNousController::class, 'index'])->name(
 
 
 Route::middleware('auth')->group(function () {
+    Route::get('/favoris', [FavoriController::class, 'index'])->name('favoris.index');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

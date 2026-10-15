@@ -37,7 +37,6 @@
             @empty
                 <p>Aucun fichier la table des sons.</p>
             @endforelse  
-
         </div>
 
     </section>
@@ -51,7 +50,6 @@
             @empty
                 <p>Aucun fichier la table des sons.</p>
             @endforelse  
-
         </div>
 
     </section>
@@ -62,8 +60,7 @@
         <p> Sound Forest est une bibliothèque sonore francophone qui réunit des centaines de sons, d'ambiances et de musiques pour vos montages, vidéos, podcasts et créations en tout genre. Chaque son est classé par style et par ambiance pour vous aider à trouver en quelques secondes celui qui donnera vie à votre projet.
             L'écoute est libre et sans inscription, avec 10 téléchargements par jour, ou en illimité avec un compte gratuit. Créateurs, vous pouvez aussi proposer vos propres sons pour faire grandir la forêt.
             Entrez, écoutez, et trouvez le son qui manquait à votre histoire.
-        </p>    
-    
+        </p>        
     </section>
     <script>
 

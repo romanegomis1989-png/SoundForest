@@ -16,6 +16,10 @@
                         {{ __('Sons') }}
                     </x-nav-link>
 
+                    <x-nav-link :href="route('favoris.index')" :active="request()->routeIs('favoris.index')">
+                        {{ __('Favoris') }}
+                    </x-nav-link>
+                    
                     <x-nav-link :href="route('test')" :active="request()->routeIs('test')">
                         {{ __('Test') }}
                     </x-nav-link>
@@ -93,6 +97,10 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('sons.index')" :active="request()->routeIs('sons.index')">
                 {{ __('Sons') }}
+            </x-responsive-nav-link>
+            
+            <x-responsive-nav-link :href="route('favoris.index')" :active="request()->routeIs('favoris.index')">
+                {{ __('Favoris') }}
             </x-responsive-nav-link>
 
             <x-responsive-nav-link :href="route('test')" :active="request()->routeIs('test')">
