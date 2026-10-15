@@ -15,11 +15,12 @@
         @vite(['resources/css/app.css',
          'resources/css/sf.css',
          'resources/css/style.css',
-         'resources/js/app.js'])
+         'resources/js/app.js',
+         'resources/js/waveform.js'])
          
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+        <div class="min-h-screen bg-forest-bg dark:bg-gray-900">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
@@ -35,6 +36,11 @@
             <main>
                 {{ $slot }}
             </main>
+
+            <footer class="sf-footer">
+                <span>Copyright &copy; 2026 Romane Gomis - BTS SIO SLAM</span>
+                <span><a href="{{ route('mentions-legales') }}">Mentions légales</a></span>
+            </footer>
         </div>
     </body>
 </html>

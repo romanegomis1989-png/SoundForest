@@ -19,6 +19,7 @@
         "vite": "^7.0.7"
     },
     "dependencies": {
+        "wavesurfer": "^1.3.4",
         "wavesurfer.js": "^8.0.0"
     }
 }

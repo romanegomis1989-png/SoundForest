@@ -14,9 +14,9 @@ Route::get('/mentions-legales', function() {return view('mentions');})->name('me
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::get('/test', function() {return view('test');})->name('test');
 Route::get('/qui-sommes-nous', [QuiSommesNousController::class, 'index'])->name('qui-sommes-nous');
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 
 Route::middleware('auth')->group(function () {
