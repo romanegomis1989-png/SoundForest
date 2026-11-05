@@ -50,3 +50,89 @@ input, optgroup, select, textarea {
 .auth-container a:hover, .dark .auth-container a:hover {
     color: #fff !important;
 }
+
+/* Filtres flottants - onglet Sons */
+.sf-filters {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 0 1.5rem;
+}
+
+.sf-filter-box {
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    padding: .75rem 1rem;
+    min-width: 180px;
+    background: rgba(30, 20, 60, .55);
+    border: 1px solid rgba(180, 160, 255, .25);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .35), 0 0 12px rgba(255, 215, 90, .08);
+    transition: transform .2s, box-shadow .2s;
+}
+
+.sf-filter-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .4), 0 0 16px rgba(255, 215, 90, .18);
+}
+
+.sf-filter-box label {
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: #f5d76e;
+}
+
+.sf-filter-box select {
+    background: transparent;
+    border: none;
+    color: #e8e4ff !important;
+    font-size: .95rem;
+    cursor: pointer;
+    padding-left: 0;
+}
+
+.sf-filter-box select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.sf-filter-box select option {
+    background: #1a1238;
+    color: #e8e4ff;
+}
+
+.sf-filter-reset {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    align-self: center;
+    padding: .55rem 1rem;
+    font-size: .8rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: #f5d76e;
+    background: rgba(30, 20, 60, .45);
+    border: 1px solid rgba(245, 215, 110, .35);
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    transition: background .2s, color .2s, box-shadow .2s, transform .2s;
+}
+
+.sf-filter-reset span {
+    font-size: .7rem;
+    opacity: .8;
+}
+
+.sf-filter-reset:hover {
+    color: #1a1238;
+    background: #f5d76e;
+    box-shadow: 0 0 14px rgba(245, 215, 110, .45);
+    transform: translateY(-2px);
+}
+
+[x-cloak] { display: none !important; }
