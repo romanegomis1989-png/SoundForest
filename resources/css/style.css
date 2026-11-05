@@ -93,6 +93,7 @@ input, optgroup, select, textarea {
     font-size: .95rem;
     cursor: pointer;
     padding-left: 0;
+    padding-left: 10px;
 }
 
 .sf-filter-box select:focus {
