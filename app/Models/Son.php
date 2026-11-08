@@ -5,10 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Collection;
 
 class Son extends Model
 {
 
+    public static function formats(): Collection
+    {
+        return static::query()
+            ->whereNotNull('format')
+            ->where('format', '<>', '')
+            ->distinct()
+            ->orderBy('format')
+            ->pluck('format');
+    }
 
     protected function urlComplete(): Attribute
     {

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nom')->unique();
             $table->text('description')->nullable();
             $table->string('url'); // URL du fichier audio
+            $table->string('format'); // Format du fichier audio
             $table->integer('duree')->unsigned()->nullable(); // Durée en secondes
             $table->integer('popularite')->unsigned()->default(0);
             $table->timestamp('created_at')->useCurrent();

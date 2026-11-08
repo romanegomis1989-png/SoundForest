@@ -46,6 +46,7 @@ class SonSeeder extends Seeder
                 'nom' => $nom,
                 'description' => fake()->sentence(10),
                 'url' => $nomFichier,
+                'format' => pathinfo($nomFichier, PATHINFO_EXTENSION),
                 'style_id' => Style::inRandomOrder()->first()->id,
                 'ambiance_id' => Ambiance::inRandomOrder()->first()->id,
                 'user_id' => User::inRandomOrder()->first()->id,

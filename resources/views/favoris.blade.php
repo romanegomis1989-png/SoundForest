@@ -14,7 +14,7 @@
 
         <div class="grid">
             @forelse ($sons as $son)
-                <x-son-card :son="$son" />
+                <x-son-card :son="$son" contexte="favoris" />
             @empty
                 <p>Aucun fichier dans la table des sons.</p>
             @endforelse

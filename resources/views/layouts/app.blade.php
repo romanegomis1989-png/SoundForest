@@ -43,5 +43,6 @@
                 <span><a href="{{ route('mentions-legales') }}">Mentions légales</a></span>
             </footer>
         </div>
+        @stack('scripts')
     </body>
 </html>

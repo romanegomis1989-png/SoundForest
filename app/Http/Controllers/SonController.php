@@ -12,11 +12,12 @@ class SonController extends Controller
     {
         $sons = Son::query()
             ->orderByDesc('created_at')
-            ->get(['nom', 'description', 'url', 'created_at', 'duree', 'style_id', 'ambiance_id', 'user_id']);
+            ->get(['id', 'nom', 'description', 'url', 'created_at', 'duree', 'style_id', 'ambiance_id', 'format', 'user_id']);
 
         $styles = Style::orderBy('nom')->get();
         $ambiances = Ambiance::orderBy('nom')->get();
+        $formats = Son::formats();
 
-        return view('sons', compact('sons', 'styles', 'ambiances'));
+        return view('sons', compact('sons', 'styles', 'ambiances', 'formats'));
     }
 }

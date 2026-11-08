@@ -10,12 +10,15 @@
         x-data="{
             style: '',
             ambiance: '',
-            sons: @js($sons->map(fn ($s) => [$s->style_id, $s->ambiance_id])),
-            match(s, a) {
-                return (!this.style || s == this.style) && (!this.ambiance || a == this.ambiance);
+            format: '',
+            sons: @js($sons->map(fn ($s) => [$s->style_id, $s->ambiance_id, $s->format])),
+            match(s, a, f) {
+                return (!this.style || s == this.style)
+                    && (!this.ambiance || a == this.ambiance)
+                    && (!this.format || f == this.format);
             },
             get nb() {
-                return this.sons.filter(([s, a]) => this.match(s, a)).length;
+                return this.sons.filter(([s, a, f]) => this.match(s, a, f)).length;
             }
         }">
 
@@ -43,15 +46,26 @@
                     @endforeach
                 </select>
             </div>
-            <p x-show="nb === 0 && (style || ambiance)" x-cloak>Aucun son ne correspond à ces filtres.</p>
 
-            <button type="button" class="sf-filter-reset" x-show="style || ambiance" x-cloak
-                @click="style = ''; ambiance = ''"><span aria-hidden="true">✕</span> Réinitialiser</button>
+            <div class="sf-filter-box">
+                <label for="format">Format</label>
+                <select x-model="format">
+                    <option value="">Tous les formats</option>
+                    @foreach (\App\Models\Son::formats() as $f)
+                        <option value="{{ $f }}">{{ strtoupper($f) }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <p x-show="nb === 0 && (style || ambiance || format)" x-cloak>Aucun son ne correspond à ces filtres.</p>
+
+            <button type="button" class="sf-filter-reset" x-show="style || ambiance || format" x-cloak
+                @click="style = ''; ambiance = ''; format = ''"><span aria-hidden="true">✕</span> Réinitialiser</button>
         </div>
 
         <div class="grid">
             @forelse ($sons as $son)
-                <div x-show="match({{ $son->style_id ?? 'null' }}, {{ $son->ambiance_id ?? 'null' }})">
+                <div x-show="match(@js($son->style_id), @js($son->ambiance_id), @js($son->format))">
                     <x-son-card :son="$son" />
                 </div>
             @empty
