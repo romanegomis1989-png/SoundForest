@@ -137,3 +137,30 @@ input, optgroup, select, textarea {
 }
 
 [x-cloak] { display: none !important; }
+
+.card-url {
+    
+    font-size: .8rem;
+    /*line-height: 1.5;
+    margin: 0 0 .9rem;*/
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /*min-height: 2.7em;*/
+    
+    color: var(--glow);
+}
+
+.card-url svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.card-url:hover {
+    text-decoration:underline;    
+}
