@@ -14,13 +14,13 @@ function initPlayer(root) {
     const ws = WaveSurfer.create({
         container: container,
         url: root.dataset.url,
-        height: 80,
-        waveColor: '#9ca3af',
-        progressColor: '#2563eb',
+        height: 40,
+        waveColor: '#ffffffff',
+        progressColor: '#7b25ebff',
         cursorColor: '#1e3a8a',
         barWidth: 2,
-        barGap: 1,
-        barRadius: 2,
+        barGap: 2,
+        barRadius: 5,
         normalize: true,
     });
 
